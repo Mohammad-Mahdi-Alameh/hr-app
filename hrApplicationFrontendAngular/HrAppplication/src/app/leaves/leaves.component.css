@@ -1,0 +1,9 @@
+.strong{
+  margin-right: 3px;
+  font-weight: bold;
+}
+.center {
+
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success" *ngIf="isEmployee" (click)="onNewExpenseClaim()">New Expense Claim</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12" >
+    <app-expense-claims-item
+      *ngFor="let expenseClaim of expenseClaims; let i = index"
+      [expenseClaim]="expenseClaim"
+      [index]="expenseClaim.id"
+      ></app-expense-claims-item>
+  </div>
+</div>

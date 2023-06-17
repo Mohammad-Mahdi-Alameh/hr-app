@@ -1,0 +1,35 @@
+<a
+  style="cursor: pointer;margin-bottom:10px;"
+  [routerLink]="[index]"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true, onSameUrlNavigation: 'ignore' }"
+  class="list-group-item clearfix">
+  <div class="pull-left">
+    <div class="label-value-pair">
+      <span class="label label-primary label-enlarged">Employee Username:</span>
+      <strong class="value-enlarged">{{ expenseClaim.employeeUserName }}</strong>
+    </div>
+    <div class="label-value-pair">
+      <span class="label label-primary label-enlarged">Date:</span>
+      <strong class="value-enlarged">{{ expenseClaim.date }}</strong>
+    </div>
+    <div class="label-value-pair">
+      <span class="label label-primary label-enlarged">Total Payment:</span>
+      <strong class="value-enlarged">{{ expenseClaim.total }}</strong>
+    </div>
+    <div class="label-value-pair">
+      <span class="label label-primary label-enlarged">Description:</span>
+      <strong class="value-enlarged">{{ expenseClaim.description }}</strong>
+    </div>
+    <div class="label-value-pair">
+      <span class="label label-primary label-enlarged">Status:</span>
+      <strong class="value-enlarged">{{ expenseClaim.status }}</strong>
+    </div>
+    <div class="label-value-pair">
+      <span class="label label-primary label-enlarged"> Details:</span>
+      <strong class="value-enlarged">{{ expenseClaim.expenseClaimDetails.length }}</strong>
+    </div>
+    <!-- <p class="list-group-item-text">{{ expenseClaim.address }}</p> -->
+  </div>
+  <span class="pull-right"></span>
+</a>

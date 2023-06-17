@@ -1,0 +1,93 @@
+<div class="row">
+  <div class="col-xs-12 text-right" >
+    <div class="btn-group" appDropdown *ngIf="isEmployee">
+      <button type="button" class="btn btn-success dropdown-toggle">
+        Manage Expense Claim <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li>
+          <a style="cursor: pointer" (click)="onEditExpenseClaim()"
+            >Edit Expense Claim</a
+          >
+        </li>
+        <li>
+          <a style="cursor: pointer" (click)="onDeleteExpenseClaim()"
+            >Delete Expense Claim</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="label-value-pair">
+      <span class="label label-primary">Employee User Name:</span>
+      <strong>{{ expenseClaim.employeeUserName }}</strong>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="label-value-pair">
+      <span class="label label-primary">Total Payment:</span>
+      <strong>{{ expenseClaim.total }}</strong>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="label-value-pair">
+      <span class="label label-primary">Description:</span>
+      <strong>{{ expenseClaim.description }}</strong>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="label-value-pair">
+      <span class="label label-primary">Date:</span>
+      <strong>{{ expenseClaim.date }}</strong>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="label-value-pair">
+      <span class="label label-primary">Status:</span>
+      <strong>{{ expenseClaim.status }}</strong>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h4><span class="label label-primary">Details:</span></h4>
+    <ul class="list-group mt-2">
+      <li class="list-group-item" *ngFor="let detail of expenseClaim.expenseClaimDetails">
+        <div class="row">
+          <div class="col-xs-6">
+            <strong>Type:</strong>
+            {{ detail.expenseClaimTypeName }}
+          </div>
+          <div class="col-xs-6">
+            <strong>Date:</strong>
+            {{ detail.date }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <strong>Description:</strong>
+            {{ detail.description }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <strong>Payment:</strong>
+            {{ detail.total }}
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+

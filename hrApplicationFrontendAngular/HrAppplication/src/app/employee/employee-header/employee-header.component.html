@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a routerLink="/" class="navbar-brand">Employee</a>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav ">
+        <li routerLinkActive="active"><a routerLink="/employee/leaves">Leave Requests</a></li>
+        <li routerLinkActive="active"><a routerLink="/employee/expense-claims">Expense Claims</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right navbar-center">
+        <button class="btn btn-danger" style="margin-top: 8px;" (click)="logOut()">Logout</button>
+      </ul>
+    </div>
+  </div>
+</nav>

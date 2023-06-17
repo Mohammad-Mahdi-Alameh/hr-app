@@ -1,0 +1,66 @@
+.btn {
+  margin-right: 2px;
+}
+
+.label-value-pair {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.label-value-pair .label {
+  margin-right: 5px;
+}
+
+.label-enlarged {
+  font-size: 16px;
+  padding: 3px 6px;
+}
+
+.value-enlarged {
+  font-size: 16px;
+}
+
+
+.custom-container {
+  width: 80vw; /* Adjust the width as needed */
+
+}
+
+.label-value-pair {
+  margin-bottom: 10px;
+}
+
+.label {
+  font-size: 16px;
+}
+
+.label-value-pair strong {
+  font-size: 18px;
+}
+.label-value-pair {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.label {
+  margin-right: 5px;
+}
+.label-enlarged {
+  font-size: 16px;
+  padding: 3px 6px;
+}
+.value-enlarged {
+  font-size: 16px;
+}
+.list-group-item{
+  margin-bottom: 17px;
+}
+
+.label-date {
+  color: red;
+  font-weight: bold;
+}
+
+

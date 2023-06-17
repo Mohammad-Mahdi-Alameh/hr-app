@@ -1,0 +1,39 @@
+<a
+  style="cursor: pointer;margin-bottom:10px;"
+  [routerLink]="[index]"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true, onSameUrlNavigation: 'ignore' }"
+  class="list-group-item clearfix">
+  <div class="pull-left">
+    <div class="label-value-pair">
+      <span class="label label-primary label-enlarged">Username:</span>
+      <strong class="value-enlarged">{{ employee.username }}</strong>
+    </div>
+    <div class="label-value-pair">
+      <span class="label label-primary label-enlarged">Name:</span>
+      <strong class="value-enlarged">{{ employee.name }}</strong>
+    </div>
+    <div class="label-value-pair">
+      <span class="label label-primary label-enlarged">Email:</span>
+      <strong class="value-enlarged">{{ employee.email }}</strong>
+    </div>
+    <div class="label-value-pair">
+      <span class="label label-primary label-enlarged">Address:</span>
+      <strong class="value-enlarged">{{ employee.address }}</strong>
+    </div>
+    <div class="label-value-pair">
+      <span class="label label-primary label-enlarged">Department:</span>
+      <strong class="value-enlarged">{{ employee.department.name }}</strong>
+    </div>
+    <div class="label-value-pair">
+      <span class="label label-primary label-enlarged">Leaves:</span>
+      <strong class="value-enlarged">{{ employee.leaves.length }}</strong>
+    </div>
+    <div class="label-value-pair">
+      <span class="label label-primary label-enlarged">Expense Claims:</span>
+      <strong class="value-enlarged">{{ employee.expenseClaims.length }}</strong>
+    </div>
+    <!-- <p class="list-group-item-text">{{ employee.address }}</p> -->
+  </div>
+  <span class="pull-right"></span>
+</a>

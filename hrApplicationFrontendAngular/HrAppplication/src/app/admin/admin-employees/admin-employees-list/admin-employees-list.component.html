@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success" (click)="onNewEmployee()">New Employee</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12" >
+    <app-admin-employees-item
+      *ngFor="let employee of employees; let i = index"
+      [employee]="employee"
+      [index]="employee.id"
+      ></app-admin-employees-item>
+  </div>
+</div>

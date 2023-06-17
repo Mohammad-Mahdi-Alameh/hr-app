@@ -1,0 +1,65 @@
+<div class="center">
+  <div class="row" >
+    <div class="col-xs-12 " [ngStyle]="{'width': widthValue}" >
+      <app-leave-edit *ngIf="isEmployee"></app-leave-edit>
+      <div *ngIf="!isEmployee" class="form-group">
+        <div class="row">
+          <label for="filterInput" class="control-label col-xs-1">Filter By Any Value:</label>
+          <div class="col-xs-11">
+            <div class="input-group">
+              <input type="text" class="form-control" id="filterInput" [(ngModel)]="filtered">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <hr>
+      <ul class="list-group">
+        <li class="list-group-item" style="margin-bottom: 17px;" *ngFor="let leave of leaves |filter: filtered: ['fromDate', 'toDate', 'numberOfDays', 'note', 'leaveType','employeeUserName']
+        " (click)="onEditItem(leave.id)">
+          <div class="row">
+            <div class="col-xs-2">
+              <div class="label-value-pair">
+                <span class="label label-primary label-enlarged">From Date:</span>
+                <strong class="value-enlarged">{{ leave.fromDate }}</strong>
+              </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="label-value-pair">
+                <span class="label label-primary label-enlarged">To Date:</span>
+                <strong class="value-enlarged">{{ leave.toDate }}</strong>
+              </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="label-value-pair">
+                <span class="label label-primary label-enlarged">Number of Days:</span>
+                <strong class="value-enlarged">{{ leave.numberOfDays }}</strong>
+              </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="label-value-pair">
+                <span class="label label-primary label-enlarged">Note:</span>
+                <strong class="value-enlarged">{{ leave.note }}</strong>
+              </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="label-value-pair">
+                <span class="label label-primary label-enlarged">Leave Type:</span>
+                <strong class="value-enlarged">{{ leave.leaveType }}</strong>
+              </div>
+            </div>
+            <div class="col-xs-2" *ngIf="!isEmployee">
+              <div class="label-value-pair">
+                <span class="label label-primary label-enlarged">Employee Username:</span>
+                <strong class="value-enlarged">{{ leave.employeeUserName }}</strong>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+

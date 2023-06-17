@@ -1,0 +1,83 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="row">
+        <div class="col-sm-2 form-group">
+          <label for="fromDate">From Date</label>
+          <input
+            type="date"
+            id="fromDate"
+            class="form-control"
+            name="fromDate"
+            ngModel
+            required
+          >
+        </div>
+        <div class="col-sm-2 form-group">
+          <label for="toDate">To Date</label>
+          <input
+            type="date"
+            id="toDate"
+            class="form-control"
+            name="toDate"
+            ngModel
+            required
+          >
+        </div>
+        <div class="col-sm-2 form-group">
+          <label for="note">Note</label>
+          <input
+            type="text"
+            id="note"
+            class="form-control"
+            name="note"
+            ngModel
+            required
+          >
+        </div>
+        <div class="col-sm-2 form-group">
+          <label for="numberOfDays">Number of Days</label>
+          <input
+            type="number"
+            id="numberOfDays"
+            class="form-control"
+            name="numberOfDays"
+            ngModel
+            pattern="^[1-9]+[0-9]*$"
+            required
+          >
+        </div>
+        <div class="col-sm-2 form-group">
+          <label for="leaveType">Leave Type</label>
+          <select
+            id="leaveType"
+            class="form-control"
+            name="leaveType"
+            ngModel
+            required
+          >
+            <option value="">Select Leave Type</option>
+            <option value="Sick">Sick</option>
+            <option value="Travel">Travel</option>
+            <option value="Bussiness">Bussiness</option>
+            <option value="Education">Education</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button
+            class="btn btn-success"
+            type="submit"
+            [disabled]="!f.valid">{{ editMode ? 'Update' : 'Add' }}</button>
+          <button
+            class="btn btn-danger"
+            type="button"
+            (click)="onDelete()"
+            *ngIf="editMode">Delete</button>
+          <button class="btn btn-primary" type="button" (click)="onClear()">Clear</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
